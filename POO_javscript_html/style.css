@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #1f2937;
+    display: flex;
+    justify-content: center;
+    padding: 40px 16px;
+}
+
+.app {
+    width: 100%;
+    max-width: 480px;
+}
+
+.app__header {
+    text-align: center;
+    color: #f1f5f9;
+    margin-bottom: 24px;
+}
+
+.app__header h1 {
+    margin: 0 0 4px;
+    font-size: 1.8rem;
+}
+
+.app__header p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    margin-bottom: 16px;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+.field label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.field input {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.field input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+}
+
+.btn:hover {
+    filter: brightness(0.92);
+}
+
+.btn--primary {
+    background: #6366f1;
+    color: #fff;
+}
+
+.btn--success {
+    background: #16a34a;
+    color: #fff;
+}
+
+.btn--danger {
+    background: #dc2626;
+    color: #fff;
+}
+
+.btn--ghost {
+    background: transparent;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+    margin-top: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+.conta__resumo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.conta__label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+}
+
+.conta__resumo h2 {
+    margin: 2px 0 0;
+}
+
+.conta__saldo h2 {
+    color: #16a34a;
+}
+
+.conta__acoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.form-inline .field {
+    margin-bottom: 8px;
+}
+
+.mensagem {
+    min-height: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.mensagem.erro {
+    color: #dc2626;
+}
+
+.mensagem.sucesso {
+    color: #16a34a;
+}
+
+.extrato {
+    margin-top: 16px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 12px;
+}
+
+.extrato h3 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+}
+
+.extrato__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 180px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.extrato__lista li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    background: #f8fafc;
+    border-radius: 6px;
+}
+
+.extrato__lista li.deposito {
+    color: #16a34a;
+}
+
+.extrato__lista li.saque {
+    color: #dc2626;
+}

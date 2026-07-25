@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta Bancária | POO JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="app__header">
+            <h1>Conta Bancária</h1>
+            <p>Exemplo de encapsulamento com classes em JavaScript</p>
+        </header>
+
+        <section class="card" id="criar-conta-card">
+            <h2>Abrir conta</h2>
+            <form id="form-criar-conta">
+                <div class="field">
+                    <label for="titular">Titular</label>
+                    <input type="text" id="titular" placeholder="Nome do titular" required>
+                </div>
+                <div class="field">
+                    <label for="saldo-inicial">Saldo inicial (R$)</label>
+                    <input type="number" id="saldo-inicial" min="0" step="0.01" value="0">
+                </div>
+                <button type="submit" class="btn btn--primary">Criar conta</button>
+            </form>
+        </section>
+
+        <section class="card card--conta hidden" id="conta-card">
+            <div class="conta__resumo">
+                <div>
+                    <span class="conta__label">Titular</span>
+                    <h2 id="conta-titular">-</h2>
+                </div>
+                <div class="conta__saldo">
+                    <span class="conta__label">Saldo</span>
+                    <h2 id="conta-saldo">R$ 0,00</h2>
+                </div>
+            </div>
+
+            <div class="conta__acoes">
+                <form id="form-deposito" class="form-inline">
+                    <div class="field">
+                        <label for="valor-deposito">Depositar (R$)</label>
+                        <input type="number" id="valor-deposito" min="0.01" step="0.01" placeholder="0,00" required>
+                    </div>
+                    <button type="submit" class="btn btn--success">Depositar</button>
+                </form>
+
+                <form id="form-saque" class="form-inline">
+                    <div class="field">
+                        <label for="valor-saque">Sacar (R$)</label>
+                        <input type="number" id="valor-saque" min="0.01" step="0.01" placeholder="0,00" required>
+                    </div>
+                    <button type="submit" class="btn btn--danger">Sacar</button>
+                </form>
+            </div>
+
+            <p id="mensagem" class="mensagem" role="alert"></p>
+
+            <div class="extrato">
+                <h3>Extrato</h3>
+                <ul id="extrato-lista" class="extrato__lista"></ul>
+            </div>
+
+            <button type="button" id="btn-nova-conta" class="btn btn--ghost">Encerrar / nova conta</button>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
